@@ -1,0 +1,47 @@
+.playground {
+  width: 400px;
+  height: 200px;
+  background-color: #1f991f;
+  position: relative; }
+
+.playground .ball {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  transition: all 0.5s; }
+
+.playground .ball:hover {
+  width: 70px;
+  height: 70px;
+  top: 40px;
+  transition: all 0.5s; }
+
+.playground .ball:nth-child(even) {
+  left: 50%;
+  background-color: blue; }
+  .playground .ball:nth-child(even):hover {
+    margin-left: -10px; }
+
+.playground .ball:nth-child(odd) {
+  right: 50%;
+  background-color: red; }
+  .playground .ball:nth-child(odd):hover {
+    margin-right: -10px; }
+
+.playground .ball.white {
+  margin-right: -25px;
+  background-color: white; }
+  .playground .ball.white:hover {
+    margin-right: -35px; }
+
+.playground .ball:nth-child(1) {
+  z-index: 1; }
+
+.playground .ball:nth-child(2) {
+  z-index: 3; }
+
+.playground .ball:nth-child(3) {
+  z-index: 2; }

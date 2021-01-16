@@ -1,0 +1,77 @@
+$color-green: rgb(31, 153, 31);
+$interval-resize: .5s;
+
+.playground {
+  width: 400px;
+  height: 200px;
+  background-color: $color-green;
+  position: relative;
+}
+
+.playground .ball {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  transition: all $interval-resize;
+}
+
+// @mixin child($n) {
+//   &:nth-child(#{$n}){
+//     z-index: ($n + $n);
+//   }
+// }
+
+// .playground .ball {
+//   @for $i from 1 through 9 {
+//     @include child($i);
+//   }
+// }
+
+.playground .ball:hover {
+  width: 70px;
+  height: 70px;
+  top: 40px;
+  transition: all $interval-resize;
+}
+
+.playground .ball:nth-child(even) {
+  left: 50%;
+  background-color: blue;
+
+  &:hover {
+    margin-left: -10px;
+  }
+}
+
+.playground .ball:nth-child(odd) {
+  right: 50%;
+  background-color: red;
+
+  &:hover {
+    margin-right: -10px;
+  }
+}
+
+.playground .ball.white {
+  margin-right: -25px;
+  background-color: white;
+
+  &:hover {
+    margin-right: -35px;
+  }
+}
+
+.playground .ball {
+  &:nth-child(1) {
+    z-index: 1;
+  }
+  &:nth-child(2) {
+    z-index: 3;
+  }
+  &:nth-child(3) {
+    z-index: 2;
+  }
+}
